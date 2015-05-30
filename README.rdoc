@@ -6,3 +6,10 @@ http://railscasts.com/episodes/163
 3. Ruby 1.9.3
 
 4. http://stackoverflow.com/q/30544011/1054800
+
+5.
+   * bundle install
+   * rake db:migrate
+   * rake db:seed
+   * rails s -p 5500
+   
