@@ -1,1 +1,8 @@
-1. 
+1. Railscasts Episode #163: Self Referential Association
+
+http://railscasts.com/episodes/163
+
+2. Rails 3.2.21
+3. Ruby 1.9.3
+
+4. http://stackoverflow.com/q/30544011/1054800
