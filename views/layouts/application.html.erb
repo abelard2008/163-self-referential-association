@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= h(yield(:title) || "Untitled") %></title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= yield(:head)%>
+</head>
+<body>
+    <div id="container">
+	<div id="menu">
+	<% if logged_in? %>
+	    Logged in as <%= current_user.email %>! Not you?
+	    <%= link_to "Log out", log_out_path %>
+	    <%= link_to "View Profile", user_path(:current) %>
+	<% else %>
+	    <%=  link_to "Sign up", sign_up_path %>
+	    <%=  link_to "Log in", log_in_path %>
+	<% end %>
+    </div>
+
+    <%- flash.each do |name, msg| -%>
+	<%= content_tag :div, msg, :id => "flash#{name}"%>
+    <%- end -%>
+
+    <%- if show_title? -%>
+	<h1><%= h yield(:title) %></h1>
+    <%- end  -%>
+    <%= yield %>
+
+</body>
+</html>
