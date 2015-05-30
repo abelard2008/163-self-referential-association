@@ -1,3 +1,0 @@
-<% title "My Profile" %>
-
-<p>Username: <%= h @user.username %></p>
